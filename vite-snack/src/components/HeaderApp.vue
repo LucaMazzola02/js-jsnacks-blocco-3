@@ -1,29 +1,29 @@
 <script>
+
+import navLink from './components/Navlink.vue';
+
     export default {
     name: 'AppHeader',
+    components:{
+      navLink,
+    },
     data(){
         return{
             links : [
                 'Home',
                 'Contacts',
                 'Listin',
-                'Instagram',
+                'Profile',
+                'Sales',
             ]
         }
-    }
-    
+    }    
 };
+
 </script>
 
 <template>
-    <div class="nav-bar">
-        <ul>
-            <li v-for="link in links">
-                {{ link }}
-            </li>
-        </ul>
-    </div>
-  
+    <navLink />
 </template>
 
 <style lang="scss">
